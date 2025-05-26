@@ -1,0 +1,26 @@
+.social-media {
+    background-color: #7ab7df;
+}
+/* Header CSS */
+.header {
+    background-color: #f5f5f5;
+}
+.finor-img {
+    width: 30%;
+}
+.call-icon, .email-icon  {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px 14px;
+}
+.address, .email, .phn-no {
+    font-size: 14px;
+}
+.email a {
+    text-decoration: none;
+}
+.search-icon, .lock, .cart {
+    background-color: #3291d1;
+    padding: 10px 14px;
+    border-radius: 5px;
+}
