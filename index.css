@@ -46,6 +46,7 @@
     transition: background-color 0.3s ease;
     padding: 15px 25px !important;
     text-align: center;
+    color: #fff !important;
 }
 
 .nav-link.active {
@@ -59,7 +60,7 @@
     left: 50%;
     transform: translateX(-50%);
     bottom: 54px;
-    border-bottom: 7px solid #ffffff;
+    border-bottom: 7.2px solid #e7e6e6;
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
     width: 130px;
@@ -67,7 +68,80 @@
 .nav-item {
     width: 130px;
 }
+.navbar {
+    background-color: #3291d1;
+}
+/* purchase css */
+.purchase {
+    background: url(images/purchase-bg.JPG);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.features {
+    padding-top: 70mm;
+    padding-bottom: 40mm;
+}
+.feature-txt {
+    font-size: 20px;
+    color: #fff;
+}
+.financial-txt {
+    color: #fff;
+    font-size: 44px;
+    font-weight: bold;
+    line-height: 50px;
+}
+/* banner css */
+.banner {
+    background: url(images/banner.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 7rem;
+}
+/* card css */
+.cards {
+    margin-top: -190px;
+}
+.card-image {
+    width: 50%;
+}
+.card-content {
+    padding: 30px 50px;
+}
+.card-content p {
+    color: #57a3d5;
+    font-weight: bold;
+}
+.card-content span {
+    font-size: 11px;
+    color: gray;
+}
+/* about us css */
+.company {
+    position: relative;
+    color: #57a3d5;
+    font-size: 30px;
+    font-weight: bold;
+}
+.company::after {
+    content: '';
+    position: absolute;
+    border-bottom: 5px;
+    width: 50px;
+    height: 5px;
+    border-radius: 10px;
+    background: #57a3d5;
+    bottom: -15px;
+    left: 0px;
+}
 
+
+
+
+
+
+
+/* Header Media */
 @media (min-width: 768px) and (max-width: 990px) {
     .finor-img {
         width: 82%;
@@ -93,4 +167,86 @@
     border-right: 7px solid transparent;
     width: 0px;
 }
+}
+/* purchase media */
+@media (max-width:492px) {
+    .financial-txt {
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 24px;
+    }
+    .feature-txt {
+        font-size: 12px;
+    }
+    .features {
+        padding-top: 8mm;
+        padding-bottom: 20mm;
+    }
+    .btn.btn-primary {
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+    .btn.btn-light {
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+}
+@media (min-width:492px) and (max-width:768px) {
+    .financial-txt {
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 24px;
+    }
+    .feature-txt {
+        font-size: 12px;
+    }
+    .features {
+        padding-top: 15mm;
+        padding-bottom: 14mm;
+    }
+    .btn.btn-primary {
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+    .btn.btn-light {
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .features {
+        padding-top: 30mm;
+        padding-bottom: 20mm;
+    }
+    .feature-txt {
+        font-size: 15px;
+    }
+    .financial-txt {
+        color: #fff;
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 30px;
+    }
+    .card-content {
+        padding: 10px 25px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+    .features {
+        padding-top: 40mm;
+        padding-bottom: 25mm;
+    }
+    .feature-txt {
+        font-size: 18px;
+    }
+    .financial-txt {
+        font-size: 31px;
+        font-weight: bold;
+        line-height: 40px;
+    }
+}
+@media (max-width:768px) {
+    .banner {
+        background: url();
+    }
 }
