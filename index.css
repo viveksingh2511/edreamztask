@@ -106,20 +106,21 @@
     width: 50%;
 }
 .card-content {
-    padding: 30px 50px;
+    padding: 50px 42px;
 }
 .card-content p {
     color: #57a3d5;
     font-weight: bold;
+    font-size: 14px;
 }
 .card-content span {
-    font-size: 11px;
+    font-size:11px;
     color: gray;
 }
 /* about us css */
-.company {
+.company, .about-company {
     position: relative;
-    color: #57a3d5;
+    color: #3291d1;
     font-size: 30px;
     font-weight: bold;
 }
@@ -133,6 +134,9 @@
     background: #57a3d5;
     bottom: -15px;
     left: 0px;
+}
+.book-icon i {
+    color: #57a3d5;
 }
 
 
