@@ -86,19 +86,34 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#" id="home-link"><i class="bi bi-house-fill"></i> Home</a>
+                  <a class="nav-link n-link active" href="#" data-i18n="home" id="home-link"><i class="bi bi-house-fill"></i>
+                    Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="about-link" href="#about"><i class="bi bi-file-person-fill"></i> About</a>
+                  <a class="nav-link n-link" id="about-link" data-i18n="about" href="#"><i class="bi bi-file-person-fill"></i>
+                    About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="bi bi-substack"></i> Blog</a>
+                  <a class="nav-link n-link" id="blog-link" data-i18n="blog" href="#"><i class="bi bi-substack"></i> Blog</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="bi bi-gear-fill"></i> Service</a>
+                  <a class="nav-link n-link" id="service-link" data-i18n="service" href="#"><i class="bi bi-gear-fill"></i>
+                    Service</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="bi bi-telephone-fill"></i> Contact</a>
+                  <a class="nav-link n-link" href="#" data-bs-toggle="modal" data-i18n="contact"
+                    data-bs-target="#contactModal"><i class="bi bi-telephone-fill"></i> Contact</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Language
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                    <li><a class="dropdown-item lang-option" href="#" data-lang="en">English</a></li>
+                    <li><a class="dropdown-item lang-option" href="#" data-lang="fr">Français</a></li>
+                    <li><a class="dropdown-item lang-option" href="#" data-lang="es">Español</a></li>
+                  </ul>
                 </li>
               </ul>
             </div>
@@ -108,6 +123,57 @@
       </div>
     </div>
   </section>
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text" id="firstName" class="form-control" placeholder="Enter first name" required>
+              </div>
+              <div class="col-md-6">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" id="lastName" class="form-control" placeholder="Enter last name" required>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" class="form-control" placeholder="Enter email" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="status" class="form-label">Status</label>
+              <select id="status" class="form-select" required>
+                <option value="">Choose status</option>
+                <option value="student">Student</option>
+                <option value="professional">Professional</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="avatar" class="form-label">Upload Avatar</label>
+              <input type="file" id="avatar" class="form-control" accept="image/*">
+            </div>
+
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <section class="purchase">
     <div class="container">
       <div class="row">
@@ -173,15 +239,15 @@
           <p class="company-txt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem ratione quas
             accusantium aperiam culpa quibusdam amet eos nostrum. Consequatur, accusamus.</p>
         </div>
-        <div class="col-md-4 mt-5 text-center text-sm-start">
-          <img src="images/aboutus-img.PNG" alt="">
+        <div class="col-lg-4 mt-5 text-center text-sm-start">
+          <img src="images/aboutus-img.PNG" class="w-100" alt="">
           <p class="about-company mt-4">ABOUT US</p>
           <p class="company-txt mt-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem ratione quas
             accusantium aperiam culpa quibusdam amet eos nostrum. Consequatur, accusamus.</p>
           <p class="company-txt mt-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem ratione quas
             accusantium aperiam culpa quibusdam amet eos nostrum. Consequatur, accusamus.</p>
         </div>
-        <div class="col-md-4 mt-5 ps-5">
+        <div class="col-lg-4 mt-5 ps-xl-5">
           <div class="d-flex">
             <div class="book-icon">
               <i class="bi bi-journal-text fs-1"></i>
@@ -189,7 +255,7 @@
             <div class="ps-3">
               <p class="about-company">DIVERSITY</p>
               <p class="company-txt mt-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem ratione quas
-            accusantium aperiam culpa.</p>
+                accusantium aperiam culpa.</p>
             </div>
           </div>
           <div class="d-flex">
@@ -199,7 +265,7 @@
             <div class="ps-3">
               <p class="about-company">TRANSPARENCY</p>
               <p class="company-txt mt-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem ratione quas
-            accusantium aperiam culpa.</p>
+                accusantium aperiam culpa.</p>
             </div>
           </div>
           <div class="d-flex">
@@ -209,17 +275,131 @@
             <div class="ps-3">
               <p class="about-company">INTEGRITY</p>
               <p class="company-txt mt-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem ratione quas
-            accusantium aperiam culpa.</p>
+                accusantium aperiam culpa.</p>
             </div>
           </div>
         </div>
-        <div class="col-md-4 mt-5 text-center text-sm-start">
-          <img src="images/ship.PNG" alt="">
-          <img class="mt-5" src="images/ship.PNG" alt="">
+        <div class="col-lg-4 mt-5 text-center text-sm-start">
+          <img src="images/ship.PNG" class="w-100" alt="">
+          <img class="mt-5 w-100" src="images/ship.PNG" alt="">
         </div>
       </div>
     </div>
   </section>
+  <section id="blog" class="blog-sec">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 blog-img">
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="service" class="service-sec">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 pb-5 pt-5">
+          <p class="text-center service-txt pt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nesciunt
+            fuga
+            numquam doloribus maxime accusantium aut architecto minima necessitatibus totam corrupti nobis animi
+            veritatis voluptatibus fugiat earum maiores mollitia iste quia qui a, vero obcaecati perferendis saepe?
+            Repellendus quaerat et ducimus deleniti, sit nulla aliquam provident harum explicabo nam dolores, alias
+            tenetur commodi aspernatur totam. Illo accusamus ratione nisi, sequi ipsum itaque! Libero ipsum ut eius
+            repellat tempore, omnis aut sed amet totam neque ad iusto? Amet ea vel, optio ducimus consequuntur id
+            corporis? Tenetur vero distinctio optio nemo aliquid, sapiente ab asperiores quisquam perspiciatis
+            repellendus velit maxime consequuntur rerum!</p>
+        </div>
+        <div class="col-md-2 col-12 bg-light p-0 m-0 text-center pt-4 pb-5">
+          <i class="bi bi-briefcase-fill fs-1"></i>
+          <p class="ps-2 pe-2">BUSINESS CONSULTANCY</p>
+        </div>
+        <div class="col-md-2 col-12 background-light p-0 m-0 text-center pt-4">
+          <i class="bi bi-reception-4 fs-1"></i>
+          <p class="ps-4 pe-4"> ECONOMY BALANCE</p>
+        </div>
+        <div class="col-md-2 col-12 bg-light p-0 m-0 text-center pt-4">
+          <i class="bi bi-car-front-fill fs-1"></i>
+          <p class="ps-2 pe-2">AUTO INDUSTRY</p>
+        </div>
+        <div class="col-md-2 col-12 background-light p-0 m-0 text-center pt-4">
+          <i class="bi bi-buildings-fill fs-1"></i>
+          <p class="ps-2 pe-2">INDUSTRIAL MARKETING</p>
+        </div>
+        <div class="col-md-2 col-12 bg-light p-0 m-0 text-center pt-4">
+          <i class="bi bi-currency-exchange fs-1"></i>
+          <p class="ps-4 pe-4">FINANCIAL ADVISOR</p>
+        </div>
+        <div class="col-md-2 col-12 background-light p-0 m-0 text-center pt-4">
+          <i class="bi bi-camera-fill fs-1"></i>
+          <p class="ps-2 pe-2">MEDIA & EVENT</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row">
+        <!-- About us -->
+        <div class="col-md-3 col-sm-6 mb-4">
+          <h5 class="fw-bold">About us</h5>
+          <p>
+            Over 24 years experience & knowledge international standards,
+            technology changes & industrial systems, we are dedicated provides seds the best.
+          </p>
+          <p>Estibulum efficitur urna tortor, sed finibus justo tristique nec.</p>
+          <div>
+            <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-white me-2"><i class="bi bi-pinterest"></i></a>
+            <a href="#" class="text-white me-2"><i class="bi bi-dribbble"></i></a>
+            <a href="#" class="text-white me-2"><i class="bi bi-flickr"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-skype"></i></a>
+          </div>
+        </div>
+
+        <!-- Recent post -->
+        <div class="col-md-3 col-sm-6 mb-4">
+          <h5 class="fw-bold">Recent post</h5>
+          <p><i class="bi bi-caret-right-fill"></i> The Making of a Legacy</p>
+          <small>20 June 2018</small>
+          <hr>
+          <p><i class="bi bi-caret-right-fill"></i> How Marching for Science Risks...</p>
+          <small>20 June 2018</small>
+          <hr>
+          <p><i class="bi bi-caret-right-fill"></i> After Setbacks and Suits...</p>
+          <small>20 June 2018</small>
+        </div>
+
+        <!-- External links -->
+        <div class="col-md-3 col-sm-6 mb-4">
+          <h5 class="fw-bold">External links</h5>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-chevron-right"></i> Consectetur adipiscing elied</li>
+            <li><i class="bi bi-chevron-right"></i> Etiam eget diam euismoied</li>
+            <li><i class="bi bi-chevron-right"></i> Ornare nisl se rutrumested</li>
+            <li><i class="bi bi-chevron-right"></i> Nullam lobortis tellus sitired</li>
+            <li><i class="bi bi-chevron-right"></i> Amet enim scelerisque sied</li>
+          </ul>
+        </div>
+
+        <!-- Subscribe us -->
+        <div class="col-md-3 col-sm-6 mb-4">
+          <h5 class="fw-bold">Subscribe us</h5>
+          <p>
+            Phasellus mollis non mauris vel commodo. Etiam nec felis quis sapien pharetra dictum.
+          </p>
+          <input type="email" class="form-control mb-2" placeholder="Email address">
+          <button class="btn btn-outline-light w-100">SUBSCRIBE US</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" style="display: none;">
+    <i class="bi bi-arrow-up-circle-fill fs-1"></i>
+  </a>
+  <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

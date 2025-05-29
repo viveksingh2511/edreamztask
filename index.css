@@ -1,3 +1,6 @@
+body {
+    position: relative;
+}
 .social-media {
     background-color: #7ab7df;
 }
@@ -63,10 +66,10 @@
     border-bottom: 7.2px solid #e7e6e6;
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
-    width: 130px;
+    width: 150px;
 }
 .nav-item {
-    width: 130px;
+    width: 150px;
 }
 .navbar {
     background-color: #3291d1;
@@ -138,6 +141,38 @@
 .book-icon i {
     color: #57a3d5;
 }
+/* blog css */
+.blog-sec {
+    background: url(images/blog.JPG);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 20rem;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  color: #c2e26a;
+  z-index: 999;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+.back-to-top:hover {
+  color: #0056b3;
+}
+/* service css */
+.service-sec {
+    background: url(images/service.JPG);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 5rem 0rem;
+}
+.service-txt {
+    font-size: 12px;
+}
+.background-light {
+    background-color: #f6f6f6;
+}
 
 
 
@@ -194,6 +229,10 @@
         margin-bottom: 10px;
         font-size: 10px;
     }
+    .blog-sec {
+        padding: 6rem;
+        margin-top: 2rem;
+    }
 }
 @media (min-width:492px) and (max-width:768px) {
     .financial-txt {
@@ -215,6 +254,10 @@
     .btn.btn-light {
         margin-bottom: 10px;
         font-size: 10px;
+    }
+    .blog-sec {
+        padding: 10rem;
+        margin-top: 2rem;
     }
 }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -251,6 +294,9 @@
 }
 @media (max-width:768px) {
     .banner {
+        background: url();
+    }
+    .service-sec {
         background: url();
     }
 }
