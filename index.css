@@ -62,7 +62,7 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 54px;
+    bottom: 100%;
     border-bottom: 7.2px solid #e7e6e6;
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
@@ -277,6 +277,12 @@ body {
     .card-content {
         padding: 10px 25px;
     }
+    .nav-item {
+    width: 110px;
+}
+.nav-link {
+    font-size: 12px !important;
+}
 }
 @media (min-width: 992px) and (max-width: 1200px) {
     .features {
@@ -299,4 +305,5 @@ body {
     .service-sec {
         background: url();
     }
+    
 }
